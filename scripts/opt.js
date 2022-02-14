@@ -4,7 +4,6 @@ let d = document.getElementsByClassName('blog-content-box')
 d = Array.prototype.slice.call(d)
 console.log(d)
 d.forEach(cur => {
-	// cur.removeEventListener('copy', e)
 	cur.addEventListener('copy', (event) => {
 		const selection = document.getSelection().toString();
 		event.clipboardData.setData('text/plain', selection);
@@ -14,3 +13,12 @@ d.forEach(cur => {
 		console.log('remove fk csdn text')
 	})
 })
+
+// window.addEventListener('copy', (event) => {
+	// const selection = document.getSelection().toString();
+	// event.clipboardData.setData('text/plain', selection);
+	// event.preventDefault();
+	// event.stopPropagation();
+	// console.log(selection)
+	// console.log('remove fk csdn text')
+// })
